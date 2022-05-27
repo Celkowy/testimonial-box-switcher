@@ -7,6 +7,7 @@ import Image from './Components/Image'
 import InfoContainer from './Components/InfoContainer'
 import Position from './Components/Position'
 import Name from './Components/Name'
+const zero = 0
 function App() {
   let [testominialNumber, changeTestimonial] = useState(0)
   const [testimonials] = useState([
@@ -57,7 +58,7 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (testominialNumber === testimonials.length) changeTestimonial((testominialNumber = 0))
+      if (testominialNumber === testimonials.length) changeTestimonial((testominialNumber = zero))
       else changeTestimonial(testominialNumber++)
     }, 5000)
     return () => clearInterval(interval)
