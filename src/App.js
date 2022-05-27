@@ -57,8 +57,8 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (testominialNumber === testimonials.length) changeTestimonial((testominialNumber = 0))
-      else changeTestimonial(++testominialNumber)
+      if (testominialNumber === testimonials.length) changeTestimonial(0)
+      else changeTestimonial(testominialNumber++)
     }, 5000)
     return () => clearInterval(interval)
   })
