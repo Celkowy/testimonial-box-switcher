@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
-  padding: 30px 50px;
+  padding: 30px 70px;
 
   @media (max-width: 768px) {
     width: 280px;

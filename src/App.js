@@ -7,9 +7,11 @@ import Image from './Components/Image'
 import InfoContainer from './Components/InfoContainer'
 import Position from './Components/Position'
 import Name from './Components/Name'
+import QuoteRight from './Components/QuoteRight'
+import QuoteLeft from './Components/QuoteLeft'
 function App() {
   let [testominialNumber, changeTestimonial] = useState(0)
-  const [testimonials] = useState([
+  const testimonials = [
     {
       name: 'Miyah Myles',
       position: 'Marketing',
@@ -53,18 +55,22 @@ function App() {
       photo: 'https://randomuser.me/api/portraits/men/97.jpg',
       text: 'This guy is a young and talented IT professional, proactive and responsible, with a strong work ethic. He is very strong in PSD2HTML conversions and HTML/CSS technology. He is a quick learner, eager to learn new technologies. He is focused and has the good dynamics to achieve due dates and outstanding results.',
     },
-  ])
+  ]
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (testominialNumber >= testimonials.length - 1) changeTestimonial(0)
       else changeTestimonial(prev => prev + 1)
     }, 10000)
-    return () => clearInterval(interval)
+    return () => {
+      clearInterval(interval)
+    }
   })
 
   return (
     <Testimonial>
+      <QuoteRight className={'fas fa-quote-right fa-quote'}></QuoteRight>
+      <QuoteLeft className={'fas fa-quote-left fa-quote'}></QuoteLeft>
       <LineAnimation></LineAnimation>
       <Content>{testimonials[testominialNumber].text}</Content>
       <Footer>
