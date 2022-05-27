@@ -13,6 +13,10 @@ const Wrapper = styled.div`
   -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   padding: 30px 50px;
+
+  @media (max-width: 768px) {
+    width: 225px;
+  }
 `
 
 export default Wrapper
