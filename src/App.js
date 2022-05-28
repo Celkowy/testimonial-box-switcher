@@ -9,6 +9,9 @@ import Position from './Components/Position'
 import Name from './Components/Name'
 import QuoteRight from './Components/QuoteRight'
 import QuoteLeft from './Components/QuoteLeft'
+
+const duration = 10000
+
 function App() {
   let [testominialNumber, changeTestimonial] = useState(0)
   const testimonials = [
@@ -61,7 +64,7 @@ function App() {
     const interval = setInterval(() => {
       if (testominialNumber >= testimonials.length - 1) changeTestimonial(0)
       else changeTestimonial(prev => prev + 1)
-    }, 10000)
+    }, duration)
     return () => {
       clearInterval(interval)
     }
@@ -71,7 +74,7 @@ function App() {
     <Testimonial>
       <QuoteRight className={'fas fa-quote-right fa-quote'}></QuoteRight>
       <QuoteLeft className={'fas fa-quote-left fa-quote'}></QuoteLeft>
-      <LineAnimation></LineAnimation>
+      <LineAnimation duration={duration} number={testominialNumber}></LineAnimation>
       <Content>{testimonials[testominialNumber].text}</Content>
       <Footer>
         <Image src={testimonials[testominialNumber].photo}></Image>
