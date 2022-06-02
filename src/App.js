@@ -13,7 +13,7 @@ import QuoteLeft from './Components/QuoteLeft'
 const duration = 10000
 
 function App() {
-  let [testominialNumber, changeTestimonial] = useState(0)
+  const [testominialNumber, changeTestimonial] = useState(0)
   const testimonials = [
     {
       name: 'Miyah Myles',

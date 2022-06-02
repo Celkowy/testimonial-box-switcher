@@ -13,6 +13,7 @@ const Animation = styled.span`
     margin-right: 10px;
   }
 `
+
 const animation = [{ width: 0 }, { width: `100%` }]
 
 const LineAnimation = ({ number, duration }) => {
