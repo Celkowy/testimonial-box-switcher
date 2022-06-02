@@ -2,8 +2,8 @@ import { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
 const Animation = styled.span`
-  position: absolute;
-  transform-origin: left;
+  display: block;
+  width: 100%;
   height: 3px;
   background-color: white;
   border-radius: 15px;
@@ -13,8 +13,7 @@ const Animation = styled.span`
     margin-right: 10px;
   }
 `
-const width = window.innerWidth
-const animation = [{ width: 0 }, { width: width > 768 ? '600px' : '260px' }]
+const animation = [{ width: 0 }, { width: `100%` }]
 
 const LineAnimation = ({ number, duration }) => {
   const ref = useRef(null)
@@ -25,7 +24,6 @@ const LineAnimation = ({ number, duration }) => {
   })
 
   useEffect(() => {
-    animationRef.current.finish()
     animationRef.current.play()
   }, [number])
 
