@@ -10,7 +10,7 @@ const QuoteLeft = styled.i`
   @media (max-width: 768px) {
     font-size: 18px;
     left: 10px;
-    top: 30px;
+    top: 40px;
   }
 `
 
